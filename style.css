@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+/* Variables */
+
+:root {
+    --main-bg: hsl(222, 26%, 31%);
+    --keypad-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+    --keys-bg: hsl(30, 25%, 89%);
+    --keys-sh: hsl(28, 16%, 65%);
+    --keys-blue: hsl(225, 21%, 49%);
+    --keys-sh-blue: hsl(224, 28%, 35%);
+    --keys-red: hsl(6, 63%, 50%);
+    --keys-sh-red: hsl(6, 70%, 34%);
+    --keypad-text: hsl(221, 14%, 31%);
+    --result-text: hsl(0, 0%, 100%);
+    --calc-color: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+    color: white;
+}
+
+main {
+    width: 330px;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Header and theme styling */
+
+.calc {
+    margin: 0 auto;
+    padding: 0 .5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    color: var(--calc-color);
+}
+
+.title {
+    font-size: xx-large;
+}
+
+.theme {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.theme p {
+    margin: 0;
+    margin-bottom: .3em;
+    letter-spacing: 1px;
+    font-size: small;
+}
+
+/* Result display */
+
+.table {
+    height: 100px;
+    margin-bottom: .75em;
+    border-radius: .5em;
+    background-color: var(--screen-bg);
+    color: var(--calc-color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1em;
+    font-size: 2em;
+    overflow-x: hidden;
+}
+
+.table p {
+    margin: 0;
+}
+
+/* Keypad */
+
+.keypad {
+    background-color: var(--keypad-bg);
+    color: var(--keypad-text);
+    padding: 1.2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 16%);
+    grid-gap: .9em;
+    border-radius: .5em;
+}
+
+.keypad-button {
+    background-color: var(--keys-bg);
+    box-shadow: 0 4px 0 var(--keys-sh);
+    padding: .4em;
+    padding-top: .6em;
+    border-radius: .2em;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.blue {
+    background-color: var(--keys-blue);
+    color: var(--result-text);
+    box-shadow: 0 4px 0 var(--keys-sh-blue);
+}
+
+#equal {
+    background-color: var(--keys-red);
+    color: var(--result-text);
+    box-shadow: 0 4px 0 var(--keys-sh-red);
+}
+
+#reset,
+#equal {
+    grid-column: span 2;
+    font-size: 1.1em;
+    padding-top: 1em;
+}
+
+#del {
+    font-size: 1.1em;
+    padding-top: 1em;
+}
+
+.keypad-button:hover,
+.switch-toggle input:checked+label:hover
+ {
+    opacity: 0.75;
+}
+
+/* Attribution style */
+
+.attribution {
+    text-align: center;
+    margin-bottom: .5em;
+    color: var(--calc-color);
+}
+
+/* Toggle settings */
+
+.toggler {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toggler-numbers {
+    margin-left: .075em;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.switch-toggle {
+    float: left;
+    background: var(--keypad-bg);
+    border-radius: .5em;
+    padding: .2em;
+}
+
+.switch-toggle input {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch-toggle input+label {
+    padding: 7px;
+    float: left;
+    color: #fff;
+    cursor: pointer;
+}
+
+.switch-toggle input:checked+label {
+    background: var(--keys-red);
+    border-radius: .5em;
+}
+
+/* Media query */
+
+@media screen and (min-width: 1440px) {
+    main {
+        width: 500px;
+    }
+
+    .theme {
+        justify-content: space-around;
+    }
+}

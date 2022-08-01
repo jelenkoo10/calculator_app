@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+          <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+          <link rel="stylesheet" href="style.css">
+          <script src="index.js" defer></script>
+          <title>Frontend Mentor | Calculator app</title>
+
+          <style>
+            .attribution { font-size: 11px; text-align: center; }
+            .attribution a { color: hsl(228, 95%, 77%); }
+          </style>
+      </head>
+    <body>
+        <main>
+            <div class="calc">
+                <p class="title">calc</p>
+                <div class="theme">
+                    <p>THEME</p>
+                    <div class="toggler">
+                        <div class="toggler-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                        <div class="switch-toggle" id="theme-toggle">
+                        
+                          <input id="theme-one" value="one" name="theme-value" type="radio" checked onclick="setTheme()" />
+                          <label for="theme-one"></label>
+                        
+                          <input id="theme-two" value="two" name="theme-value" type="radio" onclick="setTheme()" />
+                          <label for="theme-two"></label>
+                        
+                          <input id="theme-three" value="three" name="theme-value" type="radio" onclick="setTheme()" />
+                          <label for="theme-three"></label>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <p class="result" id="result"></p>
+            </div>
+            <div class="keypad">
+                <div class="keypad-button" id="7">7</div>
+                <div class="keypad-button" id="8">8</div>
+                <div class="keypad-button" id="9">9</div>
+                <div class="keypad-button blue" id="del">DEL</div>
+                <div class="keypad-button" id="4">4</div>
+                <div class="keypad-button" id="5">5</div>
+                <div class="keypad-button" id="6">6</div>
+                <div class="keypad-button" id="plus">+</div>
+                <div class="keypad-button" id="1">1</div>
+                <div class="keypad-button" id="2">2</div>
+                <div class="keypad-button" id="3">3</div>
+                <div class="keypad-button" id="minus">-</div>
+                <div class="keypad-button" id="dot">.</div>
+                <div class="keypad-button" id="0">0</div>
+                <div class="keypad-button" id="slash">/</div>
+                <div class="keypad-button" id="times">x</div>
+                <div class="keypad-button blue" id="reset">RESET</div>
+                <div class="keypad-button" id="equal">=</div>
+            </div>
+        </main>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Veljko Jelenković</a>.
+        </div>
+    </body>
+</html>
